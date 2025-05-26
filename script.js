@@ -124,12 +124,22 @@ window.addEventListener('resize', resizeCanvas);
 
 // Chat Button
 document.getElementById('chatButton').addEventListener('click', function () {
-    alert('AI Assistant: Hello! How can I help you with your data analytics needs today?');
+    //alert('AI Assistant: Hello! How can I help you with your data analytics needs today?');
 });
 const devHosts = ['localhost', '127.0.0.1'];  // add other dev hostnames if needed
 const isDev = devHosts.includes(location.hostname);
 const baseUrl = isDev ? 'http://localhost:4200' : '/app';
-console.log('isDev:', isDev);
+//console.log('isDev:', isDev);
 
+if(document.getElementById('goDashboard')){
 document.getElementById('goDashboard').href = `${baseUrl}/dashboard/demo`;
+}
+if(document.getElementById('goDashboard')){
 document.getElementById('goDashboard1').href = `${baseUrl}/dashboard/demo`;
+}
+if(document.getElementById('goRegister')){
+document.getElementById('goRegister').href = `${baseUrl}/register`;
+}
+if(document.getElementById('goRegister1')){
+document.getElementById('goRegister1').href = `${baseUrl}/register`;
+}

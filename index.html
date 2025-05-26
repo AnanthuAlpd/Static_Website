@@ -4,9 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PothansAI | Advanced Business Analytics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>PothansAI | Advanced Business Analytics Platform</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.pothansai.com/" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="PothansAI transforms business data into actionable insights using advanced AI analytics, real-time dashboards, and predictive modeling." />
+    <meta name="keywords"
+        content="AI analytics, business insights, predictive analytics, real-time dashboard, data visualization, PothansAI, data science, machine learning, enterprise AI" />
+    <meta name="author" content="PothansAI" />
+
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta property="og:title" content="PothansAI | Advanced Business Analytics Platform" />
+    <meta property="og:description"
+        content="Leverage the power of AI to unlock insights from your data. Start your 14-day free trial with PothansAI." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.pothansai.com/" />
+    <meta property="og:image" content="https://www.pothansai.com/assets/og-image.jpg" />
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PothansAI | Advanced Business Analytics Platform" />
+    <meta name="twitter:description"
+        content="AI-powered platform that delivers predictive insights, business optimization, and real-time data visualization." />
+    <meta name="twitter:image" content="https://www.pothansai.com/assets/og-image.jpg" />
+
+    <!-- Styles & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="assets/css/main.css" />
 
 </head>
 
@@ -19,12 +47,13 @@
                     <i class="fas fa-brain"></i> PothansAI
                 </a>
                 <div class="nav-links">
+                    <a href="#services">Services</a>
                     <a href="#features">Features</a>
                     <a href="#how-it-works">How It Works</a>
-                    <a href="#testimonials">Services</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#team">Team Members</a>
+                    <a href="#about">About</a>
                 </div>
-                <a id="goDashboard" class="cta-button nav-cta">Get Started</a>
+                <a href="join-team.html" class="cta-button nav-cta">Join Our Team</a>
                 <div class="mobile-menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -39,11 +68,12 @@
                 <i class="fas fa-times"></i>
             </div>
             <nav class="mobile-nav">
+                <a href="#services">Services</a>
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#team">Our Team</a>
-                <a href="#testimonials">Services</a>
-                <a id="goDashboard1" class="cta-button">Get Started</a>
+                <a href="#team">Team Members</a>
+                <a href="#about">About</a>
+                <a href="join-team.html" class="cta-button">Join Our Team</a>
             </nav>
         </div>
     </div>
@@ -56,13 +86,71 @@
                 <p>Our AI-powered analytics platform helps businesses make data-driven decisions, identify growth
                     opportunities, and optimize operations with unprecedented accuracy.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="cta-button">Start Free Trial</a>
-                    <a href="#how-it-works" class="secondary-button">Learn More</a>
+                    <a id="goDashboard" class="cta-button">Demo Page</a>
+                    <a href="#about" class="secondary-button">Learn More</a>
                 </div>
             </div>
             <div class="hero-visual">
                 <canvas id="canvas"></canvas>
             </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>Our Services</span></h2>
+                <p>Explore how PothansAI empowers your business with tailored AI-driven solutions.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="assets/svg/analytics-loss-svgrepo-com.svg" alt="AI Data Insights">
+                </div>
+                <div class="service-content">
+                    <h3>Prabha Analytics</h3>
+                    <p><strong>PRABHA</strong> is a cutting-edge <strong>Business Intelligence (BI) Predictive Analytics
+                            Engine</strong>
+                        designed to deliver high-precision sales and demand forecasting for retail and wholesale
+                        businesses. Leveraging
+                        <strong>statistical modeling, machine learning (ML), deep learning (NN), and ensemble
+                            techniques</strong>, PRABHA
+                        transforms raw historical sales data into actionable, data-driven insights with unparalleled
+                        accuracy.
+                    </p>
+                    <div class="services-btn">
+                        <a id="goDashboard1" class="cta-button">View Demo</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="service-item reverse">
+                <div class="service-image">
+                    <img src="assets/svg/website-generic-svgrepo-com.svg" alt="Business Automation">
+                </div>
+                <div class="service-content">
+                    <h3>New Generation Web Development</h3>
+                    <p>Create, optimize, and maintain stunning websites with our intelligent platform that adapts to
+                        user behavior and design best practices.</p>
+                    <div class="services-btn"><a class="secondary-button">Coming Soon</a></div>
+
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="assets/svg/research-svgrepo-com.svg" alt="Data Security">
+                </div>
+                <div class="service-content">
+                    <h3>AI Enabled Matchmaker</h3>
+                    <p>Connect with your ideal match using our AI-driven system that analyzes preferences, personality
+                        traits, and compatibility metrics.</p>
+                    <div class="services-btn"><a class="secondary-button">Coming Soon</a></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -160,43 +248,106 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <!-- About Section -->
+    <section class="about-section" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Trusted by <span>Industry Leaders</span></h2>
-                <p>See how PothansAI has transformed businesses across various industries.</p>
+                <h2><span>About Us</span></h2>
+                <p>Learn more about PothansAI – our mission, our vision, and the team behind the innovation.</p>
             </div>
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <p>"PothansAI completely transformed how we approach our market strategy. The predictive analytics
-                        helped us identify emerging trends months before our competitors, giving us a significant
-                        advantage."</p>
-                    <div class="client">
-                        <div class="client-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="Client">
-                        </div>
-                        <div class="client-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>CTO, TechGlobal Inc.</p>
-                        </div>
-                    </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>
+                        At <strong>PothansAI</strong>, we are dedicated to crafting cutting-edge AI solutions that
+                        transform the way businesses operate. From intelligent forecasting to AI-powered matchmaking, we
+                        bring innovation to life through code.
+                    </p>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To empower businesses and individuals with accessible, reliable, and powerful AI tools that
+                        drive real-world results.
+                    </p>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To lead the future of AI innovation, making smart technology an everyday asset for everyone.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/img/about.jpg" alt="Our Team at Work" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
+    <!-- Our Team Section -->
+    <section class="team" id="team">
         <div class="container">
-            <h2>Ready to Transform Your Business Data?</h2>
-            <p>Start your free 14-day trial today. No credit card required.</p>
-            <form class="cta-form">
-                <input type="email" placeholder="Enter your email address">
-                <button type="submit">Get Started</button>
-            </form>
+            <div class="section-title">
+                <h2>Our <span>Organization</span> Structure</h2>
+                <p>Meet the talented team behind our AI-powered analytics platform.</p>
+            </div>
+
+            <!-- Organization Chart -->
+            <div id="orgChartContainer" class="org-chart-container">
+                <!-- CEO Level -->
+                <div class="org-level ceo-level">
+                    <div class="org-card ceo-card">
+                        <div class="member-image">
+                            <img src="/assets/img/team/female.webp" alt="Prabha Syam Pothan, CEO of PothansAI">
+                        </div>
+                        <div class="card-content">
+                            <h3>Prabha Syam Pothan</h3>
+                            <h4>Chief Executive Officer</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C-Level Executives -->
+                <div class="org-level executive-level">
+                    <div class="executive-box">
+                        <div class="org-card executive-card">
+                            <div class="member-image">
+                                <img src="/assets/img/team/user.webp"
+                                    alt="Syam Pothan - Chief Operations Officer at PothansAI">
+                            </div>
+                            <div class="card-content">
+                                <h3>Syam Pothan</h3>
+                                <h4>Chief Operations Officer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="executive-box">
+                        <div class="org-card executive-card">
+                            <div class="member-image">
+                                <img src="/assets/img/team/boy.webp"
+                                    alt="Ananthu S - Chief Technology Officer at PothansAI">
+                            </div>
+                            <div class="card-content">
+                                <h3>Ananthu S</h3>
+                                <h4>Chief Technology Officer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="executive-box">
+                        <div class="org-card executive-card">
+                            <div class="member-image">
+                                <img src="/assets/img/team/user.webp"
+                                    alt="Sajith Pothan - Chief Admin Officer at PothansAI">
+                            </div>
+                            <div class="card-content">
+                                <h3>Sajith Pothan</h3>
+                                <h4>Chief Adminstration Officer</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
@@ -209,17 +360,18 @@
                     <p style="color: var(--text-secondary); margin-top: 20px;">Transforming business data into
                         actionable insights with advanced AI technology.</p>
                     <div class="social-links" style="margin-top: 20px;">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/InfoPothansai"><i class="fab fa-twitter"></i></a>
+                        <a href="https://info.pothansai@gmail.com"><i class="fab fa-google"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61576844483722 "><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/info.pothansai/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="join-team.html">Careers</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Press</a></li>
                     </ul>
@@ -236,8 +388,8 @@
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <ul>
-                        <li><a href="mailto:info@nexusai.com">info@pothansai.com</a></li>
-                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li><a href="mailto:info@nexusai.com">info.pothansai@gmail.com</a></li>
+                        <li><a href="tel:+1234567890">+91 88480 77749</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Sales</a></li>
                     </ul>
