@@ -1,0 +1,35 @@
+        :root {
+            --primary: #0c0e2e;
+            --secondary: #1a1f71;
+            --accent: #00f0ff;
+            --accent-alt: #7b2ff7;
+            --text: #ffffff;
+            --text-secondary: #b3b3cc;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--primary);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text);
+        }

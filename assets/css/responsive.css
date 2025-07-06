@@ -1,0 +1,161 @@
+@media (max-width: 992px) {
+    .hero-content {
+        width: 60%;
+    }
+
+    .hero-visual {
+        width: 40%;
+    }
+
+    .step:not(:last-child)::after {
+        display: none;
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        
+    }
+
+    .hero-content {
+        width: 100%;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .hero-visual {
+        position: absolute; /* 👈 still absolutely positioned */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1; /* 👈 stays behind the content */
+        opacity: 0.1; /* optional: soft background */
+    }
+
+    #canvas {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav-links,
+    .cta-button.nav-cta {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        opacity: 0.3;
+        width: 100%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-form {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .cta-form input {
+        border-radius: 30px;
+        margin-bottom: 10px;
+        border-right: 1px solid rgba(0, 240, 255, 0.3);
+    }
+
+    .cta-form button {
+        border-radius: 30px;
+        width: 100%;
+    }
+
+    .org-chart-container {
+        padding: 20px 10px;
+    }
+
+    .org-level {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .executive-level {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .department-level {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .org-card {
+        width: 90%;
+        /* Take most of the screen width on mobile */
+        max-width: 300px;
+    }
+
+    .member-image {
+        height: auto;
+    }
+
+    .member-image img {
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .org-card .card-content h3 {
+        font-size: 1rem;
+    }
+
+    .org-card .card-content h4 {
+        font-size: 0.85rem;
+    }
+
+    .service-item {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-image img {
+        width: 70%;
+    }
+}

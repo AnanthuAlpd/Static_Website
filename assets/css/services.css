@@ -1,0 +1,77 @@
+.services {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.service-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.services-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.service-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.service-image .i {
+    font-size: 200px;
+    /* Adjust this value as needed */
+    color: #00f0ff;
+    /* Optional: color */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+     display: inline-block;
+
+}
+
+.service-image img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+}
+
+.service-image .i:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 240, 255, 0.1);
+}
+
+.service-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.service-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-alt));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.service-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
