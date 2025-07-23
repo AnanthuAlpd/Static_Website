@@ -144,3 +144,4 @@ setHref('goDashboard1', '/dashboard/demo');
 setHref('goRegister', '/register/employee');
 setHref('goRegister1', '/register/employee');
 setHref('goRegisterClient', '/register/client');
+setHref('loginPage', '/login');
