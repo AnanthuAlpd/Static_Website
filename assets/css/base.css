@@ -1,4 +1,4 @@
-        :root {
+        /* :root {
             --primary: #0c0e2e;
             --secondary: #1a1f71;
             --accent: #00f0ff;
@@ -27,8 +27,38 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        } */
+        :root {
+            --primary: #0a0e27;
+            --secondary: #1a1f3a;
+            --accent: #00f0ff;
+            --accent-alt: #7c3aed;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b4c7;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         a {
             text-decoration: none;
             color: var(--text);

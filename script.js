@@ -144,4 +144,42 @@ setHref('goDashboard1', '/dashboard/demo');
 setHref('goRegister', '/register/employee');
 setHref('goRegister1', '/register/employee');
 setHref('goRegisterClient', '/register/client');
-setHref('loginPage', '/login');
+setHref('loginPage', '/login/employee');
+setHref('loginPage1', '/login/client');
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        observer.observe(card);
+    });
+});

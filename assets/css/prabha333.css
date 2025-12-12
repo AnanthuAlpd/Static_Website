@@ -1,0 +1,136 @@
+/* ===============================
+   Global Settings
+================================ */
+html {
+  scroll-padding-top: 80px; /* Adjust based on fixed navbar height */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* ===============================
+   Navbar
+================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+}
+
+.navbar ul li a:hover {
+  color: #007bff;
+}
+
+/* ===============================
+   Sections
+================================ */
+section {
+  padding: 100px 20px; /* Extra padding so content isn't hidden under navbar */
+}
+
+#home, 
+#benefits, 
+#features, 
+#pricing, 
+#contact {
+  scroll-margin-top: 80px; /* Ensures perfect alignment for each section */
+}
+
+/* ===============================
+   Hero Section
+================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-visual {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn-primary {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero .btn-primary:hover {
+  background: #0056b3;
+}
+
+/* ===============================
+   Responsive Design
+================================ */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .navbar ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
