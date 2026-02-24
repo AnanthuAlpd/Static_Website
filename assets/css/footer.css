@@ -1,5 +1,8 @@
   footer {
-      background-color: var(--primary);
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border-glass);
       padding: 60px 0 30px;
       position: relative;
   }

@@ -124,39 +124,47 @@ window.addEventListener('resize', resizeCanvas);
 
 // Chat Button
 //document.getElementById('chatButton').addEventListener('click', function () {
-    //alert('AI Assistant: Hello! How can I help you with your data analytics needs today?');
+//alert('AI Assistant: Hello! How can I help you with your data analytics needs today?');
 //});
 const devHosts = ['localhost', '127.0.0.1'];  // add other dev hostnames if needed
 const isDev = devHosts.includes(location.hostname);
 const baseUrl = isDev ? 'http://localhost:4200' : '/app';
 
-// Helper function to safely set href
-function setHref(id, path) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.href = `${baseUrl}${path}`;
-  }
+// Helper function to safely set href by class
+function setHrefByClass(className, path) {
+    const elements = document.querySelectorAll(`.${className}`);
+    elements.forEach(element => {
+        element.href = `${baseUrl}${path}`;
+    });
+}
+
+function setHrefById(id, path) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.href = `${baseUrl}${path}`;
+    }
 }
 
 // Set hrefs
-setHref('goDashboard', '/dashboard/demo');
-setHref('goDashboard1', '/dashboard/demo');
-setHref('goRegister', '/register/employee');
-setHref('goRegister1', '/register/employee');
-setHref('goRegisterClient', '/register/client');
-setHref('loginPage', '/login/employee');
-setHref('loginPage1', '/login/client');
+setHrefById('goDashboard', '/dashboard/demo');
+setHrefById('goRegister', '/register/employee');
+setHrefById('goRegisterClient', '/register/client');
+
+// Login buttons
+setHrefByClass('login-btn', '/login/employee');
+setHrefByClass('login-btn-client', '/login/client');
+setHrefByClass('login-btn-employee', '/login/employee');
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const serviceCards = document.querySelectorAll('.service-card');
-    
+
     serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-15px) scale(1.02)';
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
