@@ -49,6 +49,13 @@
     overflow: hidden;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card .service-buttons,
+.feature-card>.cta-button {
+    margin-top: auto;
 }
 
 .feature-card::before {

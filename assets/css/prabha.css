@@ -1,27 +1,55 @@
-.what_is_it{
-    padding: 120px 0;
+.what_is_it,
+.objectives,
+.features,
+.benefits {
+    padding: clamp(60px, 10vh, 120px) 0;
+    position: relative;
+    overflow: hidden;
 }
-.objectives{
-    padding: 120px 0;
+
+.what_is_it::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: radial-gradient(ellipse at right, rgba(0, 240, 255, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
 }
-.steps{
-    padding: 50px 0;
+
+.objectives::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: radial-gradient(ellipse at left, rgba(144, 72, 255, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
 }
-.features{
-    padding: 120px 0;
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: radial-gradient(ellipse at right, rgba(144, 72, 255, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
 }
-.steps{
-    padding: 50px 0;
-}
-.benefits{
-    padding: 120px 0;
-}
-.steps{
-    padding: 50px 0;
-}
-.benefits{
-    padding: 120px 0;
-}
-.steps{
-    padding: 50px 0;
+
+/* Ensure content is above backgrounds */
+.what_is_it .container,
+.objectives .container,
+.benefits .container {
+    position: relative;
+    z-index: 2;
 }
