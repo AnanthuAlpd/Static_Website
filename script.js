@@ -147,7 +147,7 @@ function setHrefById(id, path) {
 
 // Set hrefs
 setHrefById('goDashboard', '/dashboard/demo');
-setHrefById('goRegister', '/register/employee');
+setHrefById('goRegister1', '/register/employee');
 setHrefById('goRegisterClient', '/register/client');
 
 // Login buttons
