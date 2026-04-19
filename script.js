@@ -122,13 +122,11 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', resizeCanvas);
 
-// Chat Button
-//document.getElementById('chatButton').addEventListener('click', function () {
-//alert('AI Assistant: Hello! How can I help you with your data analytics needs today?');
-//});
-const devHosts = ['localhost', '127.0.0.1'];  // add other dev hostnames if needed
+// Configuration & Global State
+const devHosts = ['localhost', '127.0.0.1'];
 const isDev = devHosts.includes(location.hostname);
 const baseUrl = isDev ? 'http://localhost:4200' : '/app';
+const apiBaseUrl = isDev ? 'http://localhost:5000' : ''; 
 
 // Helper function to safely set href by class
 function setHrefByClass(className, path) {
@@ -190,4 +188,84 @@ document.addEventListener('DOMContentLoaded', function () {
         card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         observer.observe(card);
     });
+
+    // --- PREMIUM ROLLING VISITOR COUNTER LOGIC ---
+    function updateRollingCount(container, target) {
+        container.innerHTML = '';
+        const targetStr = target.toLocaleString();
+        const digits = targetStr.split('');
+
+        // Create individual strips for each character
+        digits.forEach((char, index) => {
+            if (/\d/.test(char)) {
+                const containerDiv = document.createElement('div');
+                containerDiv.className = 'digit-container';
+                
+                const strip = document.createElement('div');
+                strip.className = 'digit-strip';
+                
+                // Add digits 0-9 to the strip
+                for (let i = 0; i <= 9; i++) {
+                    const span = document.createElement('span');
+                    span.innerText = i;
+                    strip.appendChild(span);
+                }
+                
+                containerDiv.appendChild(strip);
+                container.appendChild(containerDiv);
+
+                // Set initial position to 0
+                strip.style.transform = 'translateY(0)';
+
+                // Animate to target with a slight delay for staggered effect
+                setTimeout(() => {
+                    const targetDigit = parseInt(char);
+                    // translateY by index of the digit (each digit is 1.5em high per CSS)
+                    strip.style.transform = `translateY(-${targetDigit * 1.5}em)`;
+                }, 100 + (index * 100));
+            } else {
+                // Handle commas or other symbols
+                const symbol = document.createElement('div');
+                symbol.className = 'comma';
+                symbol.innerText = char;
+                container.appendChild(symbol);
+            }
+        });
+    }
+
+    async function fetchVisitorCount() {
+        const countContainer = document.getElementById('visitor-count');
+        if (!countContainer) return;
+
+        // Check Session Storage to prevent redundant calls
+        const cachedCount = sessionStorage.getItem('pothansai_visitor_count');
+        const cacheTime = sessionStorage.getItem('pothansai_visitor_time');
+        const cacheTTL = 10 * 60 * 1000; // 10 minutes
+
+        if (cachedCount && cacheTime && (Date.now() - cacheTime < cacheTTL)) {
+            updateRollingCount(countContainer, parseInt(cachedCount));
+            return;
+        }
+
+        try {
+            const response = await fetch(`${apiBaseUrl}/api/public/visitor-count`);
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            const result = await response.json();
+            if (result.status === 'success' && result.data) {
+                const count = result.data.count;
+                
+                sessionStorage.setItem('pothansai_visitor_count', count);
+                sessionStorage.setItem('pothansai_visitor_time', Date.now());
+
+                updateRollingCount(countContainer, count);
+            }
+        } catch (error) {
+            console.error('Error fetching visitor count:', error);
+            countContainer.innerText = '---';
+        }
+    }
+
+    // Initialize visitor count
+    fetchVisitorCount();
 });
