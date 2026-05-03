@@ -36,48 +36,19 @@
     <!-- Styles & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- <link rel="stylesheet" href="styles.css" /> -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/premium.css" />
 
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#hero" class="logo">
-                    <img src="assets/img/logo.jpeg" alt="PothansAI Logo">
-                    PothansAI
-                </a>
-                <div class="nav-links">
-                    <a href="#services">Services</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#features">Features</a>
-                    <a href="#footer">Contact</a>
-                </div>
-                <!-- <a id="loginPage" class="cta-button nav-cta">Login</a> -->
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-        <div class="mobile-menu-content">
-            <div class="close-menu">
-                <i class="fas fa-times"></i>
-            </div>
-            <nav class="mobile-nav">
-                <a href="#services">Services</a>
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#footer">Contact</a>
-                <a class="cta-button login-btn">Login</a>
-            </nav>
-        </div>
-    </div>
+
+
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -88,13 +59,11 @@
                     flexible schedules, monetizing free time, and unlocking dynamic income through a virtual workspace.
                 </p>
                 <div class="hero-buttons">
-                    <a class="cta-button login-btn">Login</a>
-                    <a href="join-team.html" class="secondary-button">Get Started</a>
+                    <a class="btn btn-primary btn-glow login-btn">Login</a>
+                    <a href="join-team.html" class="btn btn-secondary">Get Started</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <canvas id="canvas"></canvas>
-            </div>
+
         </div>
     </section>
 
@@ -102,14 +71,14 @@
     <!-- servides Section -->
     <section class="services" id="services">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title fade-in-scroll">
                 <h2>Smart AI Tools for Growth</h2>
                 <p>PothansAI is an AI-ML powered platform that builds practical, intelligent tools for real-world
                     challenges across industries. From business analytics to automation, every solution is designed to
                     unlock growth through data and innovation.</p>
             </div>
             <div class="features-grid premium-grid">
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -118,12 +87,12 @@
                         Engine designed to deliver high-precision sales and demand forecasting for retail and
                         wholesale businesses.</p>
                     <div class="service-buttons">
-                        <!--<a id="goDashboard" class="cta-button">View Demo</a>--->
-                        <a href="prabha.html" class="cta-button">Access</a>
-                        <a id="goRegisterClient" class="secondary-button" style="margin-left: 0;">Sign Up</a>
+                        <!--<a id="goDashboard" class="btn btn-primary btn-glow">View Demo</a>--->
+                        <a href="prabha.html" class="btn btn-primary btn-glow">Access</a>
+                        <a id="goLoginPrabha" class="btn btn-secondary" style="margin-left: 0;">Sign In</a>
                     </div>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fa-solid fa-building-columns"></i>
                         <!-- <i class="fas fa-robot"></i> -->
@@ -132,16 +101,16 @@
                     <p>Niyamam Seva AI is a purpose-built, AI-powered legal document intelligence platform designed
                         exclusively for Indian legal professionals. Upload your case documents, ask questions in Hindi
                         or English, and receive accurate, cited answers in seconds</p>
-                    <a href="https://niyamam-seva-ai.duckdns.org/login" class="cta-button">Try it Now</a>
+                    <a href="https://niyamam-seva-ai.duckdns.org/login" class="btn btn-primary btn-glow">Try it Now</a>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3>AI Enabled Matchmaker</h3>
                     <p>Connect with your ideal match using our AI-driven system that analyzes preferences, personality
                         traits, and compatibility metrics for meaningful relationships.</p>
-                    <a href="#" class="cta-button">Coming Soon</a>
+                    <a href="#" class="btn btn-primary btn-glow">Coming Soon</a>
                 </div>
             </div>
         </div>
@@ -151,7 +120,7 @@
     <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title fade-in-scroll">
                 <h2>How PothansAI Works</h2>
                 <p>PothansAI is more than a tech company — it’s a movement that blends innovation with opportunity.
                     Here's how it empowers both businesses and people:</p>
@@ -188,13 +157,13 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title fade-in-scroll">
                 <h2>Advanced Innovative Features</h2>
                 <p>PothansAI leverages AI/ML technologies to drive innovation through virtual workspaces, flexible
                     schedules, smart tools, and income models based on collaborative network success.</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -203,7 +172,7 @@
                         enabling flexible work hours and dynamic earnings. Employees earn through work performance,
                         network-based incentives, and net profit is shared among Employees.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
@@ -212,7 +181,7 @@
                         generates real-time insights. PothansAI tools are designed to enhance productivity for
                         individuals and businesses through adaptive machine learning and predictive analytics.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
@@ -221,7 +190,7 @@
                         tools, collaborate remotely, and manage projects from anywhere, while AI handles task
                         distribution, reporting, and monitoring.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-lock"></i>
                     </div>
@@ -230,7 +199,7 @@
                         hours. Users are rewarded based on performance and contribution, making free time financially
                         meaningful.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
@@ -239,7 +208,7 @@
                         performance, referrals, and your downline’s engagement. AI continuously moniters and optimise
                         your network performance to increase earnings.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card glass-card scale-in-scroll">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
@@ -254,65 +223,22 @@
 
 
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="logo">
-                        <img src="assets/img/logo.jpeg" alt="PothansAI Logo">
-                        PothansAI
-                    </div>
-                    <p style="color: var(--text-secondary); margin-top: 20px;">Transforming Data into Growth</p>
-                    <div class="social-links" style="margin-top: 20px;">
-                        <a href="https://x.com/InfoPothansai"><i class="fab fa-twitter"></i></a>
-                        <a href="mailto:info.pothansai@gmail.com"><i class="fab fa-google"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61576844483722 "><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/info.pothansai/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/pothanai/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="join-team.html">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Press</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Webinars</a></li>
-                        <li><a href="#">API</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="mailto:info@nexusai.com">info.pothansai@gmail.com</a></li>
-                        <li><a href="tel:+1234567890">+91 88480 77749</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Sales</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 PothansAI. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+
+
 
     <!-- Floating Chat Button -->
     <!-- <div class="chat-button" id="chatButton">
         <i class="fas fa-comment-dots"></i>
     </div> -->
 
+    <!-- Visitor Counter -->
+    <div id="visitor-counter-container" class="visitor-counter">
+        <div class="counter-label">Unique Visitors</div>
+        <div id="visitor-count" class="counter-value">0</div>
+    </div>
+
     <!-- JavaScript -->
+    <script src="components.js"></script>
     <script src="script.js"></script>
 </body>
 
