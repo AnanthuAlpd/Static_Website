@@ -1,0 +1,160 @@
+/* Hero Section Center Alignment */
+.hero-center {
+    text-align: center !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+}
+
+.hero-center .hero-cta {
+    justify-content: center !important;
+}
+
+.hero-title-main {
+    margin-bottom: 0 !important;
+}
+
+.hero-tagline {
+    font-size: clamp(1.2rem, 4vw, 1.8rem) !important;
+    margin-top: 0 !important;
+    margin-bottom: 2.5rem !important;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+}
+
+.hero-description {
+    margin-top: 1rem;
+}
+
+.prabha-hero-container {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.what_is_it,
+.objectives,
+.features,
+.benefits {
+    padding: clamp(60px, 10vh, 120px) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.what_is_it::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: radial-gradient(ellipse at right, rgba(0, 240, 255, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.objectives::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: radial-gradient(ellipse at left, rgba(144, 72, 255, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: radial-gradient(ellipse at right, rgba(144, 72, 255, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content is above backgrounds */
+.what_is_it .container,
+.objectives .container,
+.benefits .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Why Prabha Card Enhancements - Specific to premium-grid */
+.why-prabha-grid.premium-grid .feature-card ul {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.why-prabha-grid.premium-grid .feature-card li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: var(--transition-fast);
+}
+
+.why-prabha-grid .feature-card li:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+/* Problem Card List Icons */
+.why-prabha-grid .feature-card:first-child li::before {
+    content: '\f06a';
+    /* Circle info/warning */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ff4757;
+    font-size: 0.9rem;
+}
+
+/* Solution Card List Icons */
+.why-prabha-grid .feature-card:nth-child(2) li::before {
+    content: '\f058';
+    /* Check circle */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #2ed573;
+    font-size: 0.9rem;
+}
+
+/* Targeted Audience List Icons */
+.why-prabha-grid .feature-card:nth-child(3) li::before {
+    content: '\f00c';
+    /* Check */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.why-prabha-grid .feature-card:nth-child(3) ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+@media (min-width: 769px) {
+    .why-prabha-grid .feature-card:nth-child(3) ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}

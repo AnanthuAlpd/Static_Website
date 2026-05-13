@@ -1,0 +1,116 @@
+const headerHTML = `
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.jpeg" alt="PothansAI Logo" class="nav-img-logo">
+                PothansAI
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html#services">AI Tools</a>
+                <a href="index.html#how-it-works">Ecosystem</a>
+                <a href="index.html#features">Features</a>
+                <a href="join-team.html">Careers</a>
+                <a href="#footer-content">Contact</a>
+                <a href="https://www.pothansai.com/app/login/employee" class="login-btn">Login</a>
+                <a href="https://www.pothansai.com/" class="nav-home-icon" aria-label="Home" title="Go to PothansAI Home"><i class="fas fa-home"></i></a>
+            </nav>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay">
+        <div class="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="mobile-menu-brand">
+            <span>PothansAI</span>
+            <small>Transforming Data into Growth</small>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html#services">AI Tools</a>
+            <a href="index.html#how-it-works">Ecosystem</a>
+            <a href="index.html#features">Features</a>
+            <a href="join-team.html">Careers</a>
+            <a href="#footer-content">Contact</a>
+            <a href="https://www.pothansai.com/app/login/employee" class="login-btn">Login</a>
+        </nav>
+        <div class="mobile-menu-footer">© 2026 PothansAI</div>
+    </div>
+`;
+
+const footerHTML = `
+    <footer id="footer-content">
+        <div class="container" style="position: relative;">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="assets/img/logo.jpeg" alt="PothansAI Logo" class="nav-img-logo"> PothansAI
+                    </div>
+                    <p>Transforming Data into Growth with elite AI technology.</p>
+                    <div id="visitor-counter-container" class="visitor-counter visitor-counter-inline">
+                        <div class="counter-label">Visitor</div>
+                        <div id="visitor-count" class="counter-value">0</div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="join-team.html">Careers</a>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="index.html#services">AI Tools</a>
+                        <a href="prabha.html">Prabha Analytics</a>
+                        <a href="https://niyamam-seva-ai.duckdns.org/login">Niyamam Seva AI</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <a href="mailto:info.pothansai@gmail.com">info.pothansai@gmail.com</a>
+                        <a href="tel:+918848077749">+91 88480 77749</a>
+                        <div class="socials footer-contact-socials">
+                            <a href="https://x.com/InfoPothansai" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/pothansai" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61576844483722" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/info.pothansai/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 PothansAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+`;
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Inject Header at start of body
+    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+    // Inject Footer at end of body
+    document.body.insertAdjacentHTML('beforeend', footerHTML);
+
+    // Mobile Menu Logic
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const closeMenu = document.querySelector('.close-menu');
+
+    if (mobileToggle && mobileMenuOverlay) {
+        mobileToggle.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('active');
+        });
+        
+        const closeMobileMenu = () => {
+            mobileMenuOverlay.classList.remove('active');
+        };
+
+        closeMenu?.addEventListener('click', closeMobileMenu);
+        
+        // Close when clicking a link
+        mobileMenuOverlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    }
+});

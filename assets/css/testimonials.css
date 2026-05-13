@@ -1,0 +1,69 @@
+.testimonials {
+    padding: 100px 0;
+    position: relative;
+}
+
+.testimonials-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial {
+    background: rgba(26, 31, 113, 0.2);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial::before {
+    content: '\201C';
+    font-size: 120px;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    color: rgba(0, 240, 255, 0.1);
+    font-family: Georgia, serif;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.client-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 2px solid var(--accent);
+}
+
+.client-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.client-info p {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin: 0;
+}
