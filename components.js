@@ -11,7 +11,6 @@ const headerHTML = `
                 <a href="index.html#features">Features</a>
                 <a href="join-team.html">Careers</a>
                 <a href="#footer-content">Contact</a>
-                <a href="https://www.pothansai.com/app/login/employee" class="login-btn">Login</a>
                 <a href="https://www.pothansai.com/" class="nav-home-icon" aria-label="Home" title="Go to PothansAI Home"><i class="fas fa-home"></i></a>
             </nav>
             <div class="mobile-toggle">
@@ -33,7 +32,6 @@ const headerHTML = `
             <a href="index.html#features">Features</a>
             <a href="join-team.html">Careers</a>
             <a href="#footer-content">Contact</a>
-            <a href="https://www.pothansai.com/app/login/employee" class="login-btn">Login</a>
         </nav>
         <div class="mobile-menu-footer">© 2026 PothansAI</div>
     </div>
@@ -89,6 +87,7 @@ const footerHTML = `
 document.addEventListener("DOMContentLoaded", () => {
     // Inject Header at start of body
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
+
     // Inject Footer at end of body
     document.body.insertAdjacentHTML('beforeend', footerHTML);
 
